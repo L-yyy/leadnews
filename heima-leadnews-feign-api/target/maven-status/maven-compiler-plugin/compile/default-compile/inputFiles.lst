@@ -1,0 +1,5 @@
+D:\workspace\heima-leadnews\heima-leadnews-feign-api\src\main\java\com\heima\apis\article\fallback\IArticleClientFallback.java
+D:\workspace\heima-leadnews\heima-leadnews-feign-api\src\main\java\com\heima\apis\wemedia\IChannelClient.java
+D:\workspace\heima-leadnews\heima-leadnews-feign-api\src\main\java\com\heima\apis\schedule\IScheduleClient.java
+D:\workspace\heima-leadnews\heima-leadnews-feign-api\src\main\java\com\heima\apis\wemedia\fallback\IChannelClientFallback.java
+D:\workspace\heima-leadnews\heima-leadnews-feign-api\src\main\java\com\heima\apis\article\IArticleClient.java
