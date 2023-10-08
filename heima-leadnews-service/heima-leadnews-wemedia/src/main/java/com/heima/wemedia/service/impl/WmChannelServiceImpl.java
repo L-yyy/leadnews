@@ -1,11 +1,16 @@
 package com.heima.wemedia.service.impl;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.heima.apis.wemedia.IChannelClient;
+import com.heima.model.common.dtos.PageResponseResult;
 import com.heima.model.common.dtos.ResponseResult;
 import com.heima.model.common.enums.AppHttpCodeEnum;
+import com.heima.model.wemedia.dtos.ChannelDto;
 import com.heima.model.wemedia.dtos.WmChannelDto;
 import com.heima.model.wemedia.pojos.WmChannel;
 import com.heima.wemedia.mapper.WmChannelMapper;
@@ -52,6 +57,34 @@ public class WmChannelServiceImpl extends ServiceImpl<WmChannelMapper, WmChannel
         save(wmChannel);
 
         return ResponseResult.okResult(AppHttpCodeEnum.SUCCESS);
+    }
+
+    /**
+     * 查询频道
+     * @param dto
+     * @return
+     */
+    @Override
+    public ResponseResult findByNameAndPage(ChannelDto dto) {
+        //1.检查参数
+        if (dto == null){
+            return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID);
+        }
+        dto.checkParam();
+
+        //2.设置分页查询
+        IPage page = new Page(dto.getPage(), dto.getSize());
+        //频道名称模糊查询
+        LambdaQueryWrapper<WmChannel> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        if (dto.getName() != null){
+            lambdaQueryWrapper.like(WmChannel::getName, dto.getName());
+        }
+        page = page(page, lambdaQueryWrapper);
+
+        //返回数据
+        PageResponseResult responseResult = new PageResponseResult(dto.getPage(), dto.getSize(), (int) page.getTotal());
+        responseResult.setData(page.getRecords());
+        return responseResult;
     }
 
 //    @Qualifier("com.heima.apis.wemedia.IChannelClient")

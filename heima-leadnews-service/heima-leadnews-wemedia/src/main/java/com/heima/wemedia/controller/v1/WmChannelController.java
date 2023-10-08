@@ -1,6 +1,7 @@
 package com.heima.wemedia.controller.v1;
 
 import com.heima.model.common.dtos.ResponseResult;
+import com.heima.model.wemedia.dtos.ChannelDto;
 import com.heima.model.wemedia.dtos.WmChannelDto;
 //import com.heima.wemedia.service.WmChannelService;
 import com.heima.model.wemedia.pojos.WmChannel;
@@ -33,5 +34,16 @@ public class WmChannelController {
     @PostMapping("/save")
     public ResponseResult saveChannel(@RequestBody WmChannel dto) {
         return wmChannelService.saveChannel(dto);
+    }
+
+
+    /**
+     * 查询频道通过名称和页数
+     * @param dto
+     * @return
+     */
+    @PostMapping("/list")
+    public ResponseResult findByNameAndPage(@RequestBody ChannelDto dto){
+        return wmChannelService.findByNameAndPage(dto);
     }
 }
