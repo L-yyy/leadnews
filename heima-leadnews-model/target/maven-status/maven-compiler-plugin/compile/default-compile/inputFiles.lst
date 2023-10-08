@@ -6,6 +6,7 @@ D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\w
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmUser.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\WmNewsPageReqDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\pojos\AdUser.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\dtos\AuthDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmSensitive.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmNews.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\dtos\AdLoginDto.java
@@ -18,6 +19,7 @@ D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\c
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\dtos\LoginDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\pojos\AdChannel.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\dtos\AdChannelDto.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\pojos\ApUserRealname.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\SensitiveDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\WmMateriaDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmMaterial.java
@@ -31,5 +33,6 @@ D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\c
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\pojos\ApArticleConfig.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\WmChannelDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\schedule\pojos\TaskinfoLogs.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\dtos\UserRelationDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmChannel.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\WmNewsDto.java

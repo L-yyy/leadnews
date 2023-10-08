@@ -1,5 +1,9 @@
 com\heima\user\UserApplication.class
+com\heima\user\service\ApUserRealnameService.class
 com\heima\user\service\impl\ApUserServiceImpl.class
 com\heima\user\controller\v1\ApUserLoginController.class
+com\heima\user\controller\v1\ApUserRealnameController.class
 com\heima\user\service\ApUserService.class
+com\heima\user\service\impl\ApUserRealnameServiceImpl.class
 com\heima\user\mapper\ApUserMapper.class
+com\heima\user\mapper\ApUserRealnameMapper.class

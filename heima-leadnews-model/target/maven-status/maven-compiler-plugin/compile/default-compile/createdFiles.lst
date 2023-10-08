@@ -4,6 +4,7 @@ com\heima\model\wemedia\pojos\WmSensitive.class
 com\heima\model\common\enums\TaskTypeEnum.class
 com\heima\model\admin\pojos\ApUserRealname.class
 com\heima\model\schedule\pojos\TaskinfoLogs.class
+com\heima\model\user\pojos\ApUserRealname.class
 com\heima\model\wemedia\dtos\NewsAuthDto.class
 com\heima\model\common\dtos\PageResponseResult.class
 com\heima\model\wemedia\dtos\WmLoginDto.class
@@ -26,6 +27,7 @@ com\heima\model\common\dtos\PageRequestDto.class
 com\heima\model\wemedia\dtos\WmChannelDto.class
 com\heima\model\admin\pojos\AdUser.class
 com\heima\model\article\pojos\ApArticleContent.class
+com\heima\model\user\dtos\AuthDto.class
 com\heima\model\admin\dtos\AdChannelDto.class
 com\heima\model\user\dtos\LoginDto.class
 com\heima\model\wemedia\pojos\WmUser.class
