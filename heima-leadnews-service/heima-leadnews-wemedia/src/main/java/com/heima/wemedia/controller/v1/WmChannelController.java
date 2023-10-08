@@ -56,4 +56,14 @@ public class WmChannelController {
     public ResponseResult updateChannel(@RequestBody WmChannel wmChannel){
         return wmChannelService.updateChannel(wmChannel);
     }
+
+    /**
+     * 根据id删除频道
+     * @param id
+     * @return
+     */
+    @GetMapping("/del/{id}")
+    private ResponseResult deleteById(@PathVariable("id") Integer id){
+        return wmChannelService.deleteById(id);
+    }
 }
