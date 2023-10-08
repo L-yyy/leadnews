@@ -27,4 +27,11 @@ public interface WmSensitiveService extends IService<WmSensitive> {
      * @return
      */
     ResponseResult updateSensitive(WmSensitive wmSensitive);
+
+    /**
+     * 删除敏感词
+     * @param id
+     * @return
+     */
+    ResponseResult delete(Integer id);
 }

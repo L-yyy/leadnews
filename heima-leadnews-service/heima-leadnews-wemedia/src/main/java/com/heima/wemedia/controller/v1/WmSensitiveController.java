@@ -43,4 +43,13 @@ public class WmSensitiveController {
     public ResponseResult update(@RequestBody WmSensitive wmSensitive){
         return wmSensitiveService.updateSensitive(wmSensitive);
     }
+
+    /**
+     * 删除敏感词
+     * @return
+     */
+    @DeleteMapping("/del/{id}")
+    public ResponseResult delete(@PathVariable("id") Integer id){
+        return wmSensitiveService.delete(id);
+    }
 }

@@ -99,5 +99,30 @@ public class WmSensitiveServiceImpl extends ServiceImpl<WmSensitiveMapper, WmSen
         return ResponseResult.okResult(AppHttpCodeEnum.SUCCESS);
     }
 
+    /**
+     * 删除敏感词
+     * @param id
+     * @return
+     */
+    @Override
+    public ResponseResult delete(Integer id) {
+
+        //1.检查参数
+        if (id == null){
+            return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID, "参数为空");
+        }
+
+        //2.检查是否存在
+        WmSensitive one = getOne(Wrappers.<WmSensitive>lambdaQuery().eq(WmSensitive::getId, id));
+        if (one == null){
+            return ResponseResult.errorResult(AppHttpCodeEnum.DATA_NOT_EXIST, "敏感词不存在");
+        }
+
+        //3.删除
+        removeById(id);
+
+        return ResponseResult.okResult(AppHttpCodeEnum.SUCCESS);
+    }
+
 
 }
