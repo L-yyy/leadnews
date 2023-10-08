@@ -39,7 +39,7 @@ public class WmChannelServiceImpl extends ServiceImpl<WmChannelMapper, WmChannel
     }
 
     /**
-     * 保存标签(通过admin网关，跳转到wemedia微服务)
+     * 添加标签(通过admin网关，跳转到wemedia微服务)
      * @return
      */
     @Override
