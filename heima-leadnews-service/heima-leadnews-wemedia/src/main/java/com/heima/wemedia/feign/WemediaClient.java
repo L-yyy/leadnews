@@ -10,16 +10,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class WemediaClient implements IChannelClient {
-
-    @Autowired
-    private WmChannelService wmChannelService;
-
-    @PostMapping("/api/v1/channel/save")
-    @Override
-    public ResponseResult saveChannel(@RequestBody WmChannelDto dto) {
+//@RestController
+//public class WemediaClient implements IChannelClient {
+//
+//    @Autowired
+//    private WmChannelService wmChannelService;
+//
+//    @PostMapping("/api/v1/channel/save")
+//    @Override
+//    public ResponseResult saveChannel(@RequestBody WmChannelDto dto) {
 //        return wmChannelService.saveChannel(dto);
-        return null;
-    }
-}
+//    }
+//}

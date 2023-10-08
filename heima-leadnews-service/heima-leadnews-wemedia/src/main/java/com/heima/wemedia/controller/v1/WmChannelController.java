@@ -3,6 +3,8 @@ package com.heima.wemedia.controller.v1;
 import com.heima.model.common.dtos.ResponseResult;
 import com.heima.model.wemedia.dtos.WmChannelDto;
 //import com.heima.wemedia.service.WmChannelService;
+import com.heima.model.wemedia.pojos.WmChannel;
+import com.heima.wemedia.service.WmChannelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,8 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1/channel")
 public class WmChannelController {
 
-//    @Autowired
-//    private WmChannelService wmChannelService;
+    @Autowired
+    private WmChannelService wmChannelService;
 
 //    /**
 //     * 查询频道列表下拉框数据
@@ -23,15 +25,13 @@ public class WmChannelController {
 //    }
 
 
+    /**
+     * 添加标签（由admin网关跳转到wemedia）
+     * @param dto
+     * @return
+     */
     @PostMapping("/save")
-    public ResponseResult saveChannel(@RequestBody WmChannelDto dto) {
-//        return wmChannelService.saveChannel(dto);
-        System.out.println("测试");
-        System.out.println("测试");
-        System.out.println("测试");
-        System.out.println("测试");
-        System.out.println("测试");
-        System.out.println("测试");
-        return null;
+    public ResponseResult saveChannel(@RequestBody WmChannel dto) {
+        return wmChannelService.saveChannel(dto);
     }
 }

@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -20,7 +21,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableAsync    //开启异步调用
 @EnableScheduling   //开启调度任务
 
-//@ComponentScan(basePackages = {"com.heima.apis.article","com.heima.apis.wemedia","com.heima.wemedia"})
+//@ComponentScan(basePackages = {"com.heima.apis.article","com.heima.apis.wemedia"})
 public class WemediaApplication {
 
     public static void main(String[] args) {

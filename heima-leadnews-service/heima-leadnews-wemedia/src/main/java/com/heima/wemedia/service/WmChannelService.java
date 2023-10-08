@@ -14,8 +14,8 @@ public interface WmChannelService extends IService<WmChannel> {
     public ResponseResult findAll();
 
     /**
-     * feign远程新增频道
+     * 保存标签(通过admin网关，跳转到wemedia微服务)
      * @return
      */
-//    public ResponseResult saveChannel(WmChannelDto dto);
+    public ResponseResult saveChannel(WmChannel wmChannel);
 }

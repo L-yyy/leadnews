@@ -18,10 +18,13 @@ D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\c
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\dtos\LoginDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\pojos\AdChannel.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\dtos\AdChannelDto.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\SensitiveDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\WmMateriaDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmMaterial.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\common\dtos\PageResponseResult.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\NewsAuthDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmNewsMaterial.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\ChannelDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\pojos\ApArticle.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\pojos\ApArticleContent.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\common\enums\AppHttpCodeEnum.java
