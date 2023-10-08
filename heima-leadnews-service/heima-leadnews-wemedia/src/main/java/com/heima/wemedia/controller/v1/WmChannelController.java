@@ -46,4 +46,14 @@ public class WmChannelController {
     public ResponseResult findByNameAndPage(@RequestBody ChannelDto dto){
         return wmChannelService.findByNameAndPage(dto);
     }
+
+    /**
+     * 修改频道信息
+     * @param wmChannel
+     * @return
+     */
+    @PostMapping("/update")
+    public ResponseResult updateChannel(@RequestBody WmChannel wmChannel){
+        return wmChannelService.updateChannel(wmChannel);
+    }
 }

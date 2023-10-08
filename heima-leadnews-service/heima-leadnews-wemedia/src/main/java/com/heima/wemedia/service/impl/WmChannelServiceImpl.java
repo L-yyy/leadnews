@@ -13,8 +13,10 @@ import com.heima.model.common.enums.AppHttpCodeEnum;
 import com.heima.model.wemedia.dtos.ChannelDto;
 import com.heima.model.wemedia.dtos.WmChannelDto;
 import com.heima.model.wemedia.pojos.WmChannel;
+import com.heima.model.wemedia.pojos.WmNews;
 import com.heima.wemedia.mapper.WmChannelMapper;
 import com.heima.wemedia.service.WmChannelService;
+import com.heima.wemedia.service.WmNewsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -85,6 +87,30 @@ public class WmChannelServiceImpl extends ServiceImpl<WmChannelMapper, WmChannel
         PageResponseResult responseResult = new PageResponseResult(dto.getPage(), dto.getSize(), (int) page.getTotal());
         responseResult.setData(page.getRecords());
         return responseResult;
+    }
+
+    @Autowired
+    private WmNewsService wmNewsService;
+    /**
+     * 修改频道
+     * @param wmChannel
+     * @return
+     */
+    @Override
+    public ResponseResult updateChannel(WmChannel wmChannel) {
+        //1.检查参数
+        if (wmChannel == null){
+            return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID);
+        }
+        //2.判断是否被引用
+        int count = wmNewsService.count(Wrappers.<WmNews>lambdaQuery().eq(WmNews::getChannelId, wmChannel.getId())
+                .eq(WmNews::getStatus, WmNews.Status.PUBLISHED.getCode()));
+        if (count > 0){
+            return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID, "频道被占用不可修改");
+        }
+        //3.修改
+        updateById(wmChannel);
+        return ResponseResult.okResult(AppHttpCodeEnum.SUCCESS);
     }
 
 //    @Qualifier("com.heima.apis.wemedia.IChannelClient")
