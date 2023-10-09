@@ -12,12 +12,14 @@ import com.heima.model.common.constants.WemediaConstants;
 import com.heima.model.common.dtos.PageResponseResult;
 import com.heima.model.common.dtos.ResponseResult;
 import com.heima.model.common.enums.AppHttpCodeEnum;
+import com.heima.model.wemedia.dtos.NewsAuthDto;
 import com.heima.model.wemedia.dtos.WmNewsDto;
 import com.heima.model.wemedia.dtos.WmNewsPageReqDto;
 import com.heima.model.wemedia.pojos.WmMaterial;
 import com.heima.model.wemedia.pojos.WmNews;
 import com.heima.model.wemedia.pojos.WmNewsMaterial;
 import com.heima.model.wemedia.pojos.WmUser;
+import com.heima.model.wemedia.vo.WmNewsVo;
 import com.heima.utils.thread.WmThreadLocalUtil;
 import com.heima.wemedia.mapper.WmMaterialMapper;
 import com.heima.wemedia.mapper.WmNewsMapper;
@@ -335,5 +337,31 @@ public class WmNewsServiceImpl extends ServiceImpl<WmNewsMapper, WmNews> impleme
         }
 
         return ResponseResult.okResult(AppHttpCodeEnum.SUCCESS);
+    }
+
+    @Autowired
+    private WmNewsMapper wmNewsMapper;
+    /**
+     * 媒体审核页面查询
+     * @param dto
+     * @return
+     */
+    @Override
+    public ResponseResult findList(NewsAuthDto dto) {
+        //1.参数检查
+        dto.checkParam();
+
+        //记录当前页
+        int currentPage = dto.getPage();
+
+        //2.分页查询+count查询
+        dto.setPage((dto.getPage()-1)*dto.getSize());
+        List<WmNewsVo> wmNewsVoList = wmNewsMapper.findListAndPage(dto);
+        int count = wmNewsMapper.findListCount(dto);
+
+        //3.结果返回
+        ResponseResult responseResult = new PageResponseResult(currentPage,dto.getSize(),count);
+        responseResult.setData(wmNewsVoList);
+        return responseResult;
     }
 }
