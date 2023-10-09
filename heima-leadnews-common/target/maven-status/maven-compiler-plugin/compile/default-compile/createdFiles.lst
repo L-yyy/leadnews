@@ -1,6 +1,7 @@
 com\heima\common\redis\CacheService.class
 com\heima\common\aliyun\GreenTextScan.class
 com\heima\common\aliyun\GreenImageScan.class
+com\heima\common\constants\UserConstants.class
 com\heima\common\tess4j\Tess4jClient.class
 com\heima\common\constants\WmNewsMessageConstants.class
 com\heima\common\swagger\SwaggerConfiguration.class

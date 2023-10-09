@@ -27,3 +27,4 @@ com\heima\wemedia\service\impl\WmMaterialServiceImpl.class
 com\heima\wemedia\service\impl\WmNewsServiceImpl.class
 com\heima\wemedia\controller\v1\WmChannelController.class
 com\heima\wemedia\service\impl\WmSensitiveServiceImpl.class
+com\heima\wemedia\feign\WemediaClient.class
