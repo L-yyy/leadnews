@@ -27,6 +27,7 @@ import com.heima.wemedia.mapper.WmNewsMaterialMapper;
 import com.heima.wemedia.service.WmNewsAutoScanService;
 import com.heima.wemedia.service.WmNewsService;
 import com.heima.wemedia.service.WmNewsTaskService;
+import com.heima.wemedia.service.WmUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -363,5 +364,40 @@ public class WmNewsServiceImpl extends ServiceImpl<WmNewsMapper, WmNews> impleme
         ResponseResult responseResult = new PageResponseResult(currentPage,dto.getSize(),count);
         responseResult.setData(wmNewsVoList);
         return responseResult;
+    }
+
+    @Autowired
+    private WmUserService wmUserService;
+
+    /**
+     * 查询文章VO详情
+     * @param id
+     * @return
+     */
+    @Override
+    public ResponseResult findDetailArticleVo(Integer id) {
+
+        //1.检查参数
+        if (id == null){
+            return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID);
+        }
+
+        //2.查询news信息
+        WmNews wmNews = getById(id);
+        if (wmNews == null){
+            return ResponseResult.errorResult(AppHttpCodeEnum.DATA_NOT_EXIST);
+        }
+
+        //3.查询作者
+        WmUser wmUser = wmUserService.getById(wmNews.getUserId());
+
+        //4.封装VO
+        WmNewsVo wmNewsVo = new WmNewsVo();
+        BeanUtils.copyProperties(wmNews, wmNewsVo);
+        if (wmUser != null){
+            wmNewsVo.setAuthorName(wmUser.getName());
+        }
+
+        return ResponseResult.okResult(wmNewsVo);
     }
 }

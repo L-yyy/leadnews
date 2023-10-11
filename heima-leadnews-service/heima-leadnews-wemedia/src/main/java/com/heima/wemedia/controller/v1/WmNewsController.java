@@ -6,10 +6,7 @@ import com.heima.model.wemedia.dtos.WmNewsDto;
 import com.heima.model.wemedia.dtos.WmNewsPageReqDto;
 import com.heima.wemedia.service.WmNewsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 内容列表查询
@@ -59,5 +56,10 @@ public class    WmNewsController {
     @PostMapping("/list_vo")
     public ResponseResult findList(@RequestBody NewsAuthDto dto){
         return wmNewsService.findList(dto);
+    }
+
+    @GetMapping("/one_vo/{id}")
+    public ResponseResult findDetailArticleVo(@PathVariable("id") Integer id){
+        return wmNewsService.findDetailArticleVo(id);
     }
 }
