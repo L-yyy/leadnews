@@ -400,4 +400,46 @@ public class WmNewsServiceImpl extends ServiceImpl<WmNewsMapper, WmNews> impleme
 
         return ResponseResult.okResult(wmNewsVo);
     }
+
+    /**
+     * 人工审核通过or失败  2 审核失败  4 审核成功
+     * @param dto
+     * @param status
+     * @return
+     */
+    @Override
+    public ResponseResult chnageStatus(NewsAuthDto dto, Short status) {
+
+        //1。检查参数
+        if (dto == null || dto.getId() == null){
+            return ResponseResult.errorResult(AppHttpCodeEnum.PARAM_INVALID);
+        }
+
+        //2.查询该文章
+        WmNews wmNews = getOne(Wrappers.<WmNews>lambdaQuery().eq(WmNews::getId, dto.getId()));
+        if (wmNews == null){
+            return ResponseResult.errorResult(AppHttpCodeEnum.DATA_NOT_EXIST, "该文章已不存在");
+        }
+
+        //3.修改状态
+        wmNews.setStatus(status);
+        //判断是否是驳回，需要添加内容
+        if (dto.getMsg() != null){
+            wmNews.setReason(dto.getMsg());
+        }
+        updateById(wmNews);
+
+        //审核成功，则需要创建app端文章数据，并修改自媒体文章
+        if (status.equals(com.heima.common.constants.WemediaConstants.WM_NEWS_AUTH_PASS)){
+            //创建app端文章数据
+            ResponseResult responseResult = wmNewsAutoScanService.saveAppArticle(wmNews);
+            if (responseResult.getCode().equals(200)){
+                wmNews.setArticleId((Long) responseResult.getData());
+                wmNews.setStatus(WmNews.Status.PUBLISHED.getCode());
+                updateById(wmNews);
+            }
+        }
+
+        return ResponseResult.okResult(AppHttpCodeEnum.SUCCESS);
+    }
 }
