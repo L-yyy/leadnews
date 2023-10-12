@@ -8,6 +8,7 @@ D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\w
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\pojos\AdUser.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\dtos\AuthDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmSensitive.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\common\annotation\IdEncrypt.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmNews.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\dtos\AdLoginDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\pojos\ApUser.java
@@ -16,6 +17,7 @@ D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\a
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\schedule\dtos\Task.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\dtos\ArticleHomeDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\common\dtos\ResponseResult.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\vo\WmNewsVo.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\dtos\LoginDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\pojos\AdChannel.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\dtos\AdChannelDto.java

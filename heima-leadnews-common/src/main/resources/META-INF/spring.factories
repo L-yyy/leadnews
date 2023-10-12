@@ -5,7 +5,8 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.heima.common.aliyun.GreenImageScan,\
   com.heima.common.aliyun.GreenTextScan,\
   com.heima.common.tess4j.Tess4jClient,\
-  com.heima.common.redis.CacheService
+  com.heima.common.redis.CacheService,\
+  com.heima.common.jackson.InitJacksonConfig
 
 
 #只要哪一个微服务依赖了这个common，这个就能去生效自动装配
