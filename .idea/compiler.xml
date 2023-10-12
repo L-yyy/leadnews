@@ -13,6 +13,7 @@
         <module name="heima-leadnews-wemedia-gateway" />
         <module name="tess4j-demo" />
         <module name="heima-leadnews-wemedia" />
+        <module name="heima-leadnews-behavior" />
         <module name="heima-leadnews-feign-api" />
         <module name="heima-leadnews-user" />
         <module name="heima-leadnews-article" />
@@ -37,6 +38,7 @@
       <module name="heima-leadnews-article" target="1.8" />
       <module name="heima-leadnews-article (1)" target="1.8" />
       <module name="heima-leadnews-basic" target="1.8" />
+      <module name="heima-leadnews-behavior" target="1.8" />
       <module name="heima-leadnews-common" target="1.8" />
       <module name="heima-leadnews-feign-api" target="1.8" />
       <module name="heima-leadnews-gateway" target="1.8" />
@@ -57,7 +59,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="freemarker-demo" options="-parameters" />
       <module name="heima-file-starter" options="-parameters" />
-      <module name="heima-leadnews" options="" />
+      <module name="heima-leadnews" options="-parameters" />
       <module name="heima-leadnews-admin" options="-parameters" />
       <module name="heima-leadnews-admin-gateway" options="-parameters" />
       <module name="heima-leadnews-apis" options="-parameters" />
@@ -65,6 +67,7 @@
       <module name="heima-leadnews-article" options="-parameters" />
       <module name="heima-leadnews-article (1)" options="-parameters" />
       <module name="heima-leadnews-basic" options="" />
+      <module name="heima-leadnews-behavior" options="-parameters" />
       <module name="heima-leadnews-common" options="-parameters" />
       <module name="heima-leadnews-feign-api" options="-parameters" />
       <module name="heima-leadnews-gateway" options="" />

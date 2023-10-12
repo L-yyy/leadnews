@@ -54,6 +54,7 @@ public class ApUserServiceImpl extends ServiceImpl<ApUserMapper, ApUser> impleme
             dbUser.setPassword("");
             map.put("user",dbUser);
 
+
             return ResponseResult.okResult(map);
         }else {
             //2.游客登录
