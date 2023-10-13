@@ -7,6 +7,7 @@ com\heima\user\service\impl\ApUserRelationServiceImpl.class
 com\heima\user\interceptor\AppTokenInterceptor.class
 com\heima\user\service\impl\ApUserRealnameServiceImpl.class
 com\heima\user\mapper\ApUserRealnameMapper.class
+com\heima\user\feign\UserClient.class
 com\heima\user\service\impl\ApUserServiceImpl.class
 com\heima\user\controller\v1\ApUserRealnameController.class
 com\heima\user\service\ApUserService.class

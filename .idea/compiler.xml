@@ -21,6 +21,7 @@
         <module name="heima-leadnews-admin-gateway" />
         <module name="heima-leadnews-admin" />
         <module name="heima-leadnews-schedule" />
+        <module name="heima-leadnews-comment" />
         <module name="heima-leadnews-utils" />
         <module name="heima-leadnews-app-gateway" />
         <module name="heima-leadnews-common" />
@@ -39,6 +40,7 @@
       <module name="heima-leadnews-article (1)" target="1.8" />
       <module name="heima-leadnews-basic" target="1.8" />
       <module name="heima-leadnews-behavior" target="1.8" />
+      <module name="heima-leadnews-comment" target="1.8" />
       <module name="heima-leadnews-common" target="1.8" />
       <module name="heima-leadnews-feign-api" target="1.8" />
       <module name="heima-leadnews-gateway" target="1.8" />
@@ -59,7 +61,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="freemarker-demo" options="-parameters" />
       <module name="heima-file-starter" options="-parameters" />
-      <module name="heima-leadnews" options="-parameters" />
+      <module name="heima-leadnews" options="" />
       <module name="heima-leadnews-admin" options="-parameters" />
       <module name="heima-leadnews-admin-gateway" options="-parameters" />
       <module name="heima-leadnews-apis" options="-parameters" />
@@ -68,6 +70,7 @@
       <module name="heima-leadnews-article (1)" options="-parameters" />
       <module name="heima-leadnews-basic" options="" />
       <module name="heima-leadnews-behavior" options="-parameters" />
+      <module name="heima-leadnews-comment" options="-parameters" />
       <module name="heima-leadnews-common" options="-parameters" />
       <module name="heima-leadnews-feign-api" options="-parameters" />
       <module name="heima-leadnews-gateway" options="" />
