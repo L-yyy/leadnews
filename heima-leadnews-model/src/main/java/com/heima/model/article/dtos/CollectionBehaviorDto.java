@@ -11,6 +11,7 @@ public class CollectionBehaviorDto {
     // 文章、动态ID
     @IdEncrypt
     Long entryId;
+
     /**
      * 收藏内容类型
      * 0文章
