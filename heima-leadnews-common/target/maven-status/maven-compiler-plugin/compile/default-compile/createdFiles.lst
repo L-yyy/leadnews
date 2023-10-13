@@ -6,6 +6,7 @@ com\heima\common\exception\CustomException.class
 META-INF\spring-configuration-metadata.json
 com\heima\common\jackson\ConfusionSerializer.class
 com\heima\common\exception\ExceptionCatch.class
+com\heima\common\constants\BehaviorConstants.class
 com\heima\common\constants\ScheduleConstants.class
 com\heima\common\redis\CacheService$2.class
 com\heima\common\swagger\Swagger2Configuration.class
@@ -21,5 +22,6 @@ com\heima\common\aliyun\util\UploadCredentials.class
 com\heima\common\jackson\InitJacksonConfig.class
 com\heima\common\redis\CacheService$1.class
 com\heima\common\aliyun\util\ClientUploader.class
+com\heima\common\constants\HotArticleConstants.class
 com\heima\common\constants\ArticleConstants.class
 com\heima\common\jackson\ConfusionDeserializer.class
