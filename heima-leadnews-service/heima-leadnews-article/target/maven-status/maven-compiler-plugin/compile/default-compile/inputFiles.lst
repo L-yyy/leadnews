@@ -1,7 +1,10 @@
 D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\service\ArticleFreemakerService.java
 D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\ArticleApplication.java
 D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\service\ApArticleConfigService.java
+D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\interceptor\AppTokenInterceptor.java
+D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\config\WebMvcConfig.java
 D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\service\impl\ArticleFreemakerServiceImpl.java
+D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\controller\v1\ArticleInfoController.java
 D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\feign\ArticleClient.java
 D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\service\impl\ApArticleServiceImpl.java
 D:\workspace\heima-leadnews\heima-leadnews-service\heima-leadnews-article\src\main\java\com\heima\article\mapper\ApArticleConfigMapper.java

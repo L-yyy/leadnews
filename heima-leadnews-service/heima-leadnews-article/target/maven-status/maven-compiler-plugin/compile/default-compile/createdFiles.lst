@@ -8,6 +8,9 @@ com\heima\article\service\impl\ApArticleServiceImpl.class
 com\heima\article\service\ApArticleConfigService.class
 com\heima\article\service\impl\ApArticleConfigServiceImpl.class
 com\heima\article\ArticleApplication.class
+com\heima\article\interceptor\AppTokenInterceptor.class
 com\heima\article\feign\ArticleClient.class
+com\heima\article\config\WebMvcConfig.class
 com\heima\article\mapper\ApArticleContentMapper.class
 com\heima\article\mapper\ApArticleMapper.class
+com\heima\article\controller\v1\ArticleInfoController.class

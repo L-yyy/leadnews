@@ -1,4 +1,5 @@
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\common\constants\WemediaConstants.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\vos\HotArticleVo.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\comment\dtos\CommentConfigDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\comment\dtos\CommentRepayDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\common\dtos\PageRequestDto.java
@@ -18,12 +19,15 @@ D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\w
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\dtos\LoginDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\admin\dtos\AdChannelDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\pojos\ApUserRealname.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\dtos\ArticleCommentDto.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\dtos\CollectionBehaviorDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmMaterial.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\common\dtos\PageResponseResult.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\comment\dtos\CommentLikeDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\NewsAuthDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\comment\dtos\CommentManageDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\ChannelDto.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\dtos\ArticleInfoDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\common\enums\AppHttpCodeEnum.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\dtos\WmChannelDto.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\user\dtos\UserRelationDto.java
@@ -52,6 +56,7 @@ D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\m
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\wemedia\pojos\WmNewsMaterial.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\pojos\ApArticle.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\pojos\ApArticleContent.java
+D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\vos\ArticleCommnetVo.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\article\pojos\ApArticleConfig.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\schedule\pojos\TaskinfoLogs.java
 D:\workspace\heima-leadnews\heima-leadnews-model\src\main\java\com\heima\model\comment\dtos\CommentSaveDto.java
