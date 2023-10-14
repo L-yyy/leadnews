@@ -26,7 +26,8 @@ public class ArticleHomeController {
     @PostMapping("/load")
     public ResponseResult load(@RequestBody ArticleHomeDto dto){
         //首页默认传过来的时间为2063年
-        return apArticleService.load(dto, ArticleConstants.LOADTYPE_LOAD_MORE);
+//        return apArticleService.load(dto, ArticleConstants.LOADTYPE_LOAD_MORE);  //这是未添加缓存前的代码
+        return apArticleService.load2(dto, ArticleConstants.LOADTYPE_LOAD_MORE, true);
     }
 
     /**
