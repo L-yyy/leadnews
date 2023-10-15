@@ -34,7 +34,8 @@ public class ConsumerQuickStart {
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(prop);
 
         //3.订阅主题
-        consumer.subscribe(Collections.singletonList("topic-first"));
+//        consumer.subscribe(Collections.singletonList("topic-first"));//这是使用kfaka流之前的代码 注释3
+        consumer.subscribe(Collections.singletonList("itcast-topic-out"));
 
         //4.拉取消息
 
@@ -45,8 +46,8 @@ public class ConsumerQuickStart {
                 for (ConsumerRecord<String, String> consumerRecord : consumerRecords) {
                     System.out.println(consumerRecord.key());
                     System.out.println(consumerRecord.value());
-                    System.out.println("当前消息存放在：" + consumerRecord.partition() + "分区");
-                    System.out.println("当前偏移量：" + consumerRecord.offset());
+//注释4                    System.out.println("当前消息存放在：" + consumerRecord.partition() + "分区");
+//                    System.out.println("当前偏移量：" + consumerRecord.offset());
                 }
                 //异步提交偏移量
                 consumer.commitSync();

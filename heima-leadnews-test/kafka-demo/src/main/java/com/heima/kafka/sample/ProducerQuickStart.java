@@ -31,16 +31,30 @@ public class ProducerQuickStart {
         //2.创建kafka生产者对象
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(prop);
 
-        //3.发送消息
+        //3.发送kafka流操作
+        /**
+         * 第一个参数 ：topic
+         * 第二个参数：消息的key
+         * 第三个参数：消息的value
+         */
+        for (int i = 0; i < 5; i++) {
+            ProducerRecord<String,String> kvProducerRecord = new ProducerRecord<String,String>("itcast-topic-input","hello kafka");
+            producer.send(kvProducerRecord);
+        }
+
+
+        //3.1发送消息（使用kafkaStream之前的代码）
         /**
          * 第一个参数：topic
          * 第二个参数：消息的key
          * 第三个参数：消息的value
          */
-        ProducerRecord<String, String> kvProducerRecord = new ProducerRecord<String, String>("topic-first",0, "key-001", "hello kafka");
-//        producer.send(kvProducerRecord); //之前的发送信息的方式
+       // 注释1 ProducerRecord<String, String> kvProducerRecord = new ProducerRecord<String, String>("topic-first",0, "key-001", "hello kafka");
 
-//        //同步发送信息（消息多了延时就高了，可能产生阻塞）
+
+        //        producer.send(kvProducerRecord); //之前的发送信息的方式
+
+//        //同步发送信息（消息多了延时就高了，可能产生阻塞）  注释2 同步异步只开一个
 //        try {
 //            RecordMetadata recordMetadata = producer.send(kvProducerRecord).get();
 //            System.out.println("偏移量为："+recordMetadata.offset());    //打印便宜量，他是一个连续只增的数值
@@ -50,16 +64,16 @@ public class ProducerQuickStart {
 //            e.printStackTrace();
 //        }
 
-        //异步消息发送
-        producer.send(kvProducerRecord, new Callback() {
-            @Override
-            public void onCompletion(RecordMetadata recordMetadata, Exception e) { //这里拿到了RecordMetadata消息
-                if (e != null){
-                    System.out.println("记录异常信息到日志表中");
-                }
-                System.out.println("偏移量为："+recordMetadata.offset());
-            }
-        });
+//        //异步消息发送
+//        producer.send(kvProducerRecord, new Callback() {
+//            @Override
+//            public void onCompletion(RecordMetadata recordMetadata, Exception e) { //这里拿到了RecordMetadata消息
+//                if (e != null){
+//                    System.out.println("记录异常信息到日志表中");
+//                }
+//                System.out.println("偏移量为："+recordMetadata.offset());
+//            }
+//        });
 
         //4.关闭消息通道  必须要关闭，否则消息发送不成功
         producer.close();
