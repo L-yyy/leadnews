@@ -43,6 +43,7 @@ public class ApLikesBehaviorServiceImpl implements ApLikesBehaviorService {
             return ResponseResult.errorResult(AppHttpCodeEnum.NEED_LOGIN);
         }
 
+        //创建UpdateArticleMess来获取用户行为变化，去kafka进行聚合处理
         UpdateArticleMess mess = new UpdateArticleMess();
         mess.setArticleId(dto.getArticleId());
         mess.setType(UpdateArticleMess.UpdateArticleType.LIKES);
@@ -64,7 +65,7 @@ public class ApLikesBehaviorServiceImpl implements ApLikesBehaviorService {
             mess.setAdd(-1);
         }
 
-        //发送消息，数据聚合
+        //发送消息，数据聚合  第一个参数为topic，第二个参数为发送数据
         kafkaTemplate.send(HotArticleConstants.HOT_ARTICLE_SCORE_TOPIC,JSON.toJSONString(mess));
 
 
