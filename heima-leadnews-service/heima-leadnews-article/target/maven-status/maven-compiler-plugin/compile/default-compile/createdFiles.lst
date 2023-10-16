@@ -1,5 +1,7 @@
 com\heima\article\service\impl\ArticleFreemakerServiceImpl.class
 com\heima\article\service\ArticleFreemakerService.class
+com\heima\article\stream\HotArticleStreamHandler$1.class
+com\heima\article\config\KafkaStreamConfig.class
 com\heima\article\config\XxlJobConfig.class
 com\heima\article\mapper\ApArticleConfigMapper.class
 com\heima\article\service\ApCollectionService.class
@@ -10,6 +12,8 @@ com\heima\article\service\impl\ApArticleConfigServiceImpl.class
 com\heima\article\ArticleApplication.class
 com\heima\article\feign\ArticleClient.class
 com\heima\article\config\WebMvcConfig.class
+com\heima\article\stream\HotArticleStreamHandler$2.class
+com\heima\article\stream\HotArticleStreamHandler.class
 com\heima\article\mapper\ApArticleContentMapper.class
 com\heima\article\controller\v1\ApCollectionController.class
 com\heima\article\service\HotArticleService.class
@@ -18,6 +22,7 @@ com\heima\article\controller\v1\ArticleHomeController.class
 com\heima\article\job\ComputeHotArticleJob.class
 com\heima\article\service\ApArticleConfigService.class
 com\heima\article\interceptor\AppTokenInterceptor.class
+com\heima\article\stream\HotArticleStreamHandler$3.class
 com\heima\article\service\impl\HotArticleServiceImpl.class
 com\heima\article\mapper\ApArticleMapper.class
 com\heima\article\controller\v1\ArticleInfoController.class

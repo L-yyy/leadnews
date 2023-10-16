@@ -16,14 +16,14 @@ public class WmChannelController {
     @Autowired
     private WmChannelService wmChannelService;
 
-//    /**
-//     * 查询频道列表下拉框数据
-//     * @return
-//     */
-//    @GetMapping("/channels")
-//    public ResponseResult findAll(){
-//        return wmChannelService.findAll();
-//    }
+    /**
+     * 查询频道列表下拉框数据
+     * @return
+     */
+    @GetMapping("/channels")
+    public ResponseResult findAll(){
+        return wmChannelService.findAll();
+    }
 
 
     /**

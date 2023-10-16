@@ -67,14 +67,12 @@ public class HotArticleServiceImpl implements HotArticleService {
             //检索出每个频道的文章
             if(wmChannels != null && wmChannels.size() > 0){
                 for (WmChannel wmChannel : wmChannels) {
-                    //查询当前频道下的所有数据
                     List<HotArticleVo> hotArticleVos = hotArticleVoList.stream().filter(x -> x.getChannelId().equals(wmChannel.getId())).collect(Collectors.toList());
                     //给文章进行排序，取30条分值较高的文章存入redis  key：频道id   value：30条分值较高的文章
                     sortAndCache(hotArticleVos, ArticleConstants.HOT_ARTICLE_FIRST_PAGE + wmChannel.getId());
                 }
             }
         }
-
 
         //设置推荐数据
         //给文章进行排序，取30条分值较高的文章存入redis  key：频道id   value：30条分值较高的文章
