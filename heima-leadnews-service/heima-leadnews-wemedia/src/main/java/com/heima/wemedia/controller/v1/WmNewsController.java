@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/api/v1/news")
-public class    WmNewsController {
+public class  WmNewsController {
 
     @Autowired
     private WmNewsService wmNewsService;
@@ -65,7 +65,12 @@ public class    WmNewsController {
      * @param id
      * @return
      */
-    @GetMapping("/one_vo/{id}")
+//    @GetMapping("/one_vo/{id}")
+//    public ResponseResult findDetailArticleVo(@PathVariable("id") Integer id){
+//        return wmNewsService.findDetailArticleVo(id);
+//    }
+    //上面那个是点击 内容列表 里面的修改报错404，去掉_vo后缀就行了
+    @GetMapping("/one/{id}")
     public ResponseResult findDetailArticleVo(@PathVariable("id") Integer id){
         return wmNewsService.findDetailArticleVo(id);
     }
